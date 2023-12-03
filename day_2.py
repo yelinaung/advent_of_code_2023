@@ -49,8 +49,6 @@ def part_two():
                 d[k] = max(d[k], v)
         games.append(prod(d.values()))
 
-
-
     return sum(games)
 
 
