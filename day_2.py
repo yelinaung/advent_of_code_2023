@@ -41,15 +41,15 @@ def part_one():
 
 
 def part_two():
-    games = {}
-    for game, color_counts in merged_data.items():
+    games = []
+    for _, color_counts in merged_data.items():
         d = defaultdict(int)
         for color_count in color_counts:
             for k, v in color_count.items():
                 d[k] = max(d[k], v)
-        games[game] = prod(d.values())
+        games.append(prod(d.values()))
 
-    return sum(games.values())
+    return sum(games)
 
 
 print(part_two())
