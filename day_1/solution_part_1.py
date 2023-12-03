@@ -7,10 +7,6 @@ for line in lines:
 
 total = 0
 for digit in digits:
-    first = int(digit[0])
-    if len(digit) == 1:
-        total += int(f"{first}{first}")
-    else:
-        total += int(f"{first}{digit[-1]}")
+    total += int(f"{digit[0]}{digit[-1]}")
 
 print(total)
