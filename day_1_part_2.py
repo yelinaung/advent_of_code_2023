@@ -1,6 +1,6 @@
 import regex
 
-with open("input.txt") as file:
+with open("input/day_1.txt") as file:
     lines = file.readlines()
 
 
