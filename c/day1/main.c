@@ -30,16 +30,18 @@ int main(void)
     int first_num = -1;
     int last_num = -1;
     int sum = 0;
+    // loop as long as there are characters in the string contents
     for (size_t i = 0; contents[i] != '\0'; i++) {
         if (isdigit(contents[i])) {
             // first time
-            if (first_num == -1 ) {
+            if (first_num == -1) {
+                // set first_num to the first digit
                 first_num = contents[i] - '0';
             }
             last_num = contents[i] - '0';
         }
         // last line or next line
-        if (contents[i] == '\n' || contents[i+1] == '\0') {
+        if (contents[i] == '\n' || contents[i + 1] == '\0') {
             // printf("first_num: %d, last_num: %d\n", first_num, last_num);
             sum += first_num * 10 + last_num;
             first_num = -1;
